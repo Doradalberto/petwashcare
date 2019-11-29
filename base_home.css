@@ -1,0 +1,250 @@
+body {
+	padding: 2rem;
+    background-color: #697fe4;
+    margin:8px;
+}
+
+p {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+p, a{
+	color: white;
+	font-family: 'Muli', sans-serif;
+}
+
+form {
+	font-size:60px;
+	border:none;
+	font-family: 'Muli', sans-serif;
+}
+
+
+.Botao {
+	cursor: pointer;
+	width: 100%;
+	align-items: center;
+	text-align: center;
+}
+
+.Botao2 {
+	cursor: pointer;
+	width: 65%;
+	align-items: center;
+	text-align: center;
+}
+
+.Botao22 {
+	cursor: pointer;
+	width: 100%;
+	align-items: center;
+	text-align: center;
+	text-decoration: none;
+}
+
+.Container1 {
+	background-color: #697fe4;
+	font-size: 7rem;
+	width: fixed;
+	display: flex;
+	height: 10rem;
+	margin-right: 3rem;
+	margin-left: 3rem;
+
+/*	border-style: solid;
+	border-color: black;
+	border-width: 0.5rem;
+*/	}
+
+.Container1_L {
+	display: flex;
+
+/*	border-style: solid;
+	border-color: red;
+	border-width: 0.5rem;*/
+	flex-grow: 1,3;
+}
+
+.Container1_L p {
+	margin-left: 4rem;
+	flex-grow: 3;
+
+}
+
+.Container1_L img {
+	width:9.5rem;
+	height:9.5rem;
+	flex-grow: 1;
+	cursor: pointer;
+}
+
+.Container1_L img:active{
+	transform: translateY(6px);
+}
+
+.Container2_lista{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+/*	border-style: solid;
+	border-color: blue;
+	border-width: 0.5rem;*/
+}
+
+.Container2, .Container2-{
+	position: relative;
+	background-color: #fdad1a;
+	align-items: center;
+	font-size: 4rem;
+	text-align: center;
+	width: 46.875rem;
+	height: 9.375rem;
+	margin-top: 4rem;
+	margin-left: 6rem;
+	margin-right: 6rem;
+	display: flex;
+	border-radius: 2rem;
+	color:white;
+
+	/*border-style: solid;
+	border-color: yellow;
+	border-width: 0.5rem;*/
+	}
+
+.Container2a {
+	position: relative;
+	background-color: #fdad1a;
+	align-items: center;
+	font-size: 4rem;
+	text-align: center;
+	height: 9.375rem;
+	margin-top: 4rem;
+	margin-left: 6rem;
+	margin-right: 6rem;
+	display: flex;
+	border-radius: 2rem;
+	color:white;
+
+	/*border-style: solid;
+	border-color: yellow;
+	border-width: 0.5rem;*/
+	}
+
+.Container2- {
+	width: 30rem !important;
+}
+.Container2:active {
+	transform: translateY(6px);
+}
+
+.Container2:hover {
+	background-color: #8ee9a6;
+	transition: all 0.2s;
+}
+
+.PC {
+	display: none;
+}
+
+.Container3 {
+	display: flex;
+	position: absolute;
+	bottom: 4rem;
+	width: 800px;
+	margin-left: 50px;
+/*	border-style: solid;
+	border-color: yellow;
+	border-width: 0.5rem;*/
+}
+
+.Progress_Bar {
+	height: 50px;
+	background-color:#8ee9a6;
+}
+
+.Progress_Bar2 {
+	height: 50px;
+	background-color: white;
+}
+
+button {
+	background-color: #fdad1a;
+	color: #ffffff;
+	border: none;
+	padding: 10px 20px;
+	font-size: 17px;
+	font-family: Raleway;
+	cursor: pointer;
+  }
+  
+  button:hover {
+	opacity: 0.8;
+  }
+
+.imagem-dono{
+	align-items: center;
+	width: 40rem;
+	margin-top: 6rem;
+}
+
+form{
+	font-size: 60px;
+	/*margin-top: 6rem;*/
+}
+
+.Container4 {
+	margin-top: 4rem;
+	width: 100%;
+	height:200px;
+	text-align: center;
+	font-size: 4rem;
+}
+
+.agendamento_ {
+	width: 100%;
+	height: 25rem;
+	top: 55rem;
+	position: relative;
+}
+
+.agendamento_ p {
+	font-size: 4.3rem;
+	margin-right: 2rem;
+}
+
+.agendamento2 {
+	display: flex;
+	flex-direction: row;
+	margin: 2rem 3rem;
+}
+
+
+
+@media (max-width: 375px){
+	body{
+		display: flex;
+		background-color: #697fe4;
+		flex-direction: column;
+	}
+/*	.Container2 {
+		display: none;
+	}
+	.Container1 {
+		display: none;
+	}*/
+	/*.PC {
+		display: flex;
+		font-size: 6rem;
+		background-color: #697fe4;
+	}*/
+	.Container2_lista {
+		flex-wrap: wrap !important;
+		width: 1500px !important;
+		flex-direction: row !important;
+	}
+	.Container2 {
+		width:25rem !important;
+	}
+}

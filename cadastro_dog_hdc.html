@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title> Cadastro </title>
+	<link href="assets/css/reset.css" rel="reset">
+	<link href="assets/css/base_home.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<div class="PC">
+		<p> Tente visualizar em outro dispositivo! </p>
+	</div>
+	<div class="Container1">
+		<div class="Container1_L">
+			<a href="home.html"><img src="assets/img/pata.png" alt="Imagem de uma pata de cachorro"></a>
+		</div> 
+		<div class="Container1_L">
+			<p style="font-size: 5.5rem; margin-top: 2rem;">Novo cliente</p>
+		</div> 
+	</div>
+	<div class="Container2_lista"> 
+		
+	<form class="cadastro-dono" method="post">
+		<p>Cadastro Animal</p>
+
+		<div class="item">
+			<label for ="Nome">Nome:</label>
+		</div>
+
+		<div class="item">
+			<input placeholder="Nome..." type="text" name="texto" required>
+		</div>
+
+		<div class="item">
+			<label for="raca">Raça:</label>
+		</div>
+
+		<div class="item">
+			<input type="text" name="raca" placeholder="Raça..." required>
+		</div>
+
+		<div class="item">
+			<label for="raca">Sexo:</label>
+		</div>
+
+		<div>
+			<select width=10px name= required>
+				<option>Macho</option>
+				<option>Fêmea</option>
+			</select>
+		</div>
+
+		<div class="item">
+			<label for="obs">Observações:</label>
+		</div>
+
+		<div class="item">
+			<textarea placeholder=""></textarea>
+		</div>
+
+
+	</form>
+
+		<!-- <img style="width: 400px; margin-left: 17.5rem; margin-top: 3rem;" src="assets/img/cat.JPG"> -->
+	</div>
+	<div class="Container3">
+		<a href="cadastro_humano_hdc.html"><img src="assets/img/seta_v.png" style="width: 4.5rem; margin-right: 4rem"></a>
+		<div class="Progress_Bar" style="width: 300px; margin-top: 2rem;">
+		</div>
+		<div class="Progress_Bar2" style="width: 300px; margin-top: 2rem;">
+		</div>
+		<a href="foto_dog_hdc.html"><input type="image" src="assets/img/seta.png" alt="Submit" style="width: 4.5rem; margin-left: 4rem;"></a>
+	</div>
+</body>
+
+<style type="text/css">
+	
+	.cadastro-dono {
+		flex-direction: column;
+		width: 100%;
+	}
+	.cadastro-dono p{
+		font-size: 5rem;
+		width: 100%;
+	}
+	.Container2_lista{
+		margin: 45px;
+	}
+	.item {
+		width: 100%;
+		margin-top: 10px;
+	}
+	input[type=email], input[type=text] , input[type=number], select{
+		border-radius: 2rem;
+		width: 100%;
+		height: 80px;
+		border:none;
+		padding-left: 10px;
+	}
+	textarea {
+		width: 100%;
+		height: 10rem;
+		border-radius: 2rem;
+	}
+	input[type=submit] {
+		border-radius: 2rem;
+		width: 500px;
+		text-align: center;
+		background-color: ;
+		cursor: pointer;
+		height: 100px;
+		border: none;
+		display: block;
+		margin: 0 auto;
+		margin-top: 1rem;
+		color: white;
+	}
+	input, select, option{
+		font-size: 45px;
+	}
+</style>
+
+</html> 

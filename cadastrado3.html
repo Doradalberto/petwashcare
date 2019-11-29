@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title> Cadastro </title>
+	<link href="assets/css/reset.css" rel="reset">
+	<link href="assets/css/base_home.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<div class="PC">
+		<p> Tente visualizar em outro dispositivo! </p>
+	</div>
+	<div class="Container1">
+		<div class="Container1_L">
+			<a href="home.html"><img src="assets/img/pata.png" alt="Imagem de uma pata de cachorro"></a>
+		</div> 
+		<div class="Container1_L">
+			<p style="font-size: 5.5rem; margin-top: 2rem;">Novo cliente</p>
+		</div> 
+	</div>
+	<div class="Container2_lista"> 
+
+		<form class="cadastro-dono" method="post">
+		<p>Cadastro</p>
+
+		<div class="item">
+			<label for="cpf">CPF:</label>
+		</div>
+
+		<div class="item">
+			<input type="number" onclick="testa()" id="cpf" name="cpf" placeholder="CPF..." minlength="11" maxlength="11" required>
+		</div>
+
+		<!-- <input type="submit" name="Submit this form" value="Buscar Cadastro">
+ -->
+		<div class="eee" id="botao" onclick="foto()" style="font-family: 'Muli', sans-serif;">Buscar Cadastro</div>
+		<div id="cliente" style="display: none">
+			<img src="assets/img/fotominha.jpeg" style="width: 800px; margin-top: 3rem;">
+		</div>
+	</form>
+	</div>
+
+	<div class="Container3">
+		<a href="cadastro.html"><img src="assets/img/seta_v.png" style="width: 4.5rem; margin-right: 4rem"></a>
+		<div class="Progress_Bar" style="width: 400px; margin-top: 2rem;">
+		</div>
+		<div class="Progress_Bar2" style="width: 200px; margin-top: 2rem;">
+		</div>
+		<div class="clicavel">
+			<a href="agendamento.html"><input id="seta-ir" type="image" src="assets/img/seta.png" alt="Submit" style="width: 4.5rem; margin-left: 4rem;"></a>
+		</div>
+		<div class="naoclicavel">
+			<input id="seta-nao-ir" type="image" src="assets/img/seta.png" alt="Submit" style="width: 4.5rem; margin-left: 4rem;">
+		</div>
+		<!-- <a href="cadastro_dog.html"><img src="assets/img/seta.png" style="width: 4.5rem; margin-left: 4rem;"></a> -->
+	</div>
+
+
+</body>
+
+<style type="text/css">
+	.cadastro-dono {
+		flex-direction: column;
+		width: 100%;
+	}
+	.cadastro-dono p{
+		font-size: 5rem;
+		width: 100%;
+	}
+	.Container2_lista{
+		margin: 45px;
+	}
+	.item {
+		width: 100%;
+		margin-top: 10px;
+	}
+	input[type=email], input[type=text] , input[type=number]{
+		border-radius: 2rem;
+		width: 100%;
+		height: 80px;
+		border:none;
+		padding-left: 10px;
+	}
+	form p{
+		text-align: center;
+	}
+	input[type=submit], .eee, input[type=button] {
+		border-radius: 2rem;
+		width: 600px;
+		text-align: center;
+		background-color: #dddddd;
+		cursor: pointer;
+		height: 100px;
+		border: none;
+		display: block;
+		margin: 0 auto;
+		margin-top: 4rem;
+		color: white;
+	}
+	input, button{
+		font-size: 45px;
+	}
+
+	.hidden{
+		display: none;
+	}
+	.appear{
+		display: block;
+	}
+
+</style>
+
+<script>
+function foto() {
+  var x = document.getElementById("cliente");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// function testa() {
+// 	var setair = document.getElementById("seta-ir")
+// 	var setanaoir = document.getElementById("seta-nao-ir")
+// 	if (document.getElementById("cpf").value.length < 0) {
+// 		setair.classList.add = .hidden;	 
+// 		seta-nao-ir.classList.add = .appear;
+// 	} else {
+// 		seta-nao-ir.classList.add = .hidden;
+// 		setair.classList.add = .appear;
+// 	}
+// }
+</script>
+
+</html> 

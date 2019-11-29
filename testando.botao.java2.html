@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Display some text when the checkbox is checked:</p>
+<div style="display: flex; flex-direction: column;">
+  <div style="display:inline-flex;">
+    Sim: <input type="checkbox" id="myCheck-sim" onclick="myFunction()">
+    Nao: <input type="checkbox" id="myCheck-nao" onclick="myFunction()">
+  </div>
+  
+  <div style="display: inline-flex;">
+    Sim: <input type="checkbox" id="myCheck-sim2" onclick="myFunction()">
+    Nao: <input type="checkbox" id="myCheck-nao" onclick="myFunction()">
+  </div>
+  
+  <div style="display: inline-flex; ">
+    Sim: <input type="checkbox" id="myCheck-sim3" onclick="myFunction()">
+    Nao: <input type="checkbox" id="myCheck-nao" onclick="myFunction()">
+  </div>
+
+<div class="s" id="sim" style="display:none" ></div>
+<div class="n" id="nao"></div>
+
+<script>
+function myFunction() {
+  var S = document.getElementById("sim");
+  var N = document.getElementById("nao");
+  
+  var checkBoxsim = document.getElementById("myCheck-sim");
+  var checkBoxsim2 = document.getElementById("myCheck-sim2");
+  var checkBoxsim3 = document.getElementById("myCheck-sim3");
+  
+  if (checkBoxsim.checked == true && checkBoxsim2.checked == true && checkBoxsim3.checked == true){
+    S.style.display = "block";
+    N.style.display = "none"; } 
+  else {
+    S.style.display = "none";
+    N.style.display = "block";
+  }
+}
+
+</script>
+
+<style>
+.s {
+width: 3rem;
+height: 4rem;
+background-color:green;}
+.n {
+width: 3rem;
+height: 4rem;
+background-color:red;}
+
+</style>
+
+</body>
+</html>
+

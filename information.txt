@@ -1,0 +1,40 @@
+ > Cores
+	Verde: #8ee9a6
+	Roxo: #7c6dc0
+	Azul: #697fe4
+	Amarelo: #fdad1a
+	Vermelho: #ff3028
+	Cinza: #dddddd
+
+
+ > Fonte
+	Muli https://fonts.google.com/specimen/Muli
+
+
+
+> efeitos
+adicionar um novo dog com o +
+dentro do perfil do dog, opção de checkout "apagar" o dog da lista
+
+fazer os dogs (Da lista do H/DC) com o firebase (p/ não ter que criar a mesma pagina mil vezes)
+
+Alterar a data que aparece no agenda.html
+
+arrumar layout no agenda.html (adicionar padding: 2rem; margin:0.5rem; em todo o conteúdo da página! ATENÇÃO! o body é só o título!! fazer com que o padding e a margin vá em TODO o conteúdo) ---- FEITO!!!!!
+
+Arrumar a ordem das telas!
+
+Alterar desenho do confirma -- sim e não alinhadoss verticalamente (alterar o desenho e o escrito!)
+
+FALTAM:
+	Agendamento X/Y c/ os horários disponíveis (pág 4)
+	Cadastrado? Vacina em dia? (pág 5)
+	Não é possível hospedar (pág 13)
+	Novo cliente agendamento início / fim (pág 15)
+Guimba:
+	Como linka um botão input do tipo submit?- exemplo: quando vc submita um cadastro ele te encaminha pra outra página.
+
+
+Fernanderas:
+	Arrumar o problema do botao enviar do hotel e daycare
+	Arrumar o problema do botão próximo na página de agendamento

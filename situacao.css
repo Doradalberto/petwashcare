@@ -1,0 +1,39 @@
+header{
+	display: flex;
+	background-color: blue;
+	justify-content: flex-start; 
+
+}
+.container{
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.titulo {
+	display: flex;
+	background-color: red;
+	font-size: 8rem;
+	margin-left: 3rem;
+}
+.menu {
+	background-color: gold;
+	padding: 2rem;
+	display: flex;
+	flex-flow: column ;
+	text-align: center;
+	flex-grow: 1;
+	justify-content: space-evenly;
+
+}
+.item{
+	background-color: green;
+	padding: 4rem;
+	display: inline;
+	font-size: 5rem;
+}
+
+

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title> Serviços </title>
+	<link href="assets/css/reset.css" rel="reset">
+	<link href="assets/css/base_home.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<div class="PC">
+		<p> Tente visualizar em outro dispositivo! </p>
+	</div>
+	<div class="Container1">
+		<div class="Container1_L">
+			<a href="home.html"><img src="assets/img/pata.png" alt="Imagem de uma pata de cachorro"></a>
+		</div> 
+		<div class="Container1_L">
+			<p style="font-size: 5.5rem; margin-top: 2rem;">Novo cliente</p>
+		</div> 
+	</div>
+	<div class="Container2_lista"> 
+		<p style="font-size: 4.5rem;"> Cadastro </p>
+		<form class="bituga" method="post">	
+		<div class="item">
+			<div class="peso">
+				<p> Peso: </p><input type="number" class="pesoo" min=0 max=150/><p> kg </p>
+			</div>
+		</div>
+		</form>
+		<form class="bituga" method="post">
+			<div class="item">
+				<p> Castrado? </p>
+			</div>
+			<div class="item" style="margin-bottom: 2rem">
+				<div class="arruma">
+					<label class="circulo" style="margin-right: 2rem;">Sim
+						<input type="radio" name="radio" id="myCheck-sim" onclick="myFunction()" required>
+						<span class="checkmark"></span>
+					</label>
+					<label class="circulo-nao">Não
+						<input type="radio" name="radio" id="myCheck-nao" onclick="myFunction()" required>
+						<span class="checkmark"></span>
+					</label>
+				</div>
+			</div>
+		</form>
+		<form class="bituga" method="post">
+			<div class="item">
+				<p> Vacina em dia? </p>
+			</div>
+
+			<div class="item" style="margin-bottom: 2rem">
+				<div class="arruma">
+					<label class="circulo" style="margin-right: 2rem;">Sim
+						<input type="radio" name="radio" id="myCheck-sim2" onclick="myFunction()" required>
+						<span class="checkmark"></span>
+					</label>
+					<label class="circulo-nao">Não
+						<input type="radio" name="radio" id="myCheck-nao" onclick="myFunction()" required>
+						<span class="checkmark"></span>
+					</label>
+				</div>
+			</div>
+		</form>
+		<form class="bituga" method="post">
+			<div class="item">
+				<p> Exames? </p>
+			</div>
+
+			<div class="item" style="margin-bottom: 2rem">
+				<div class="arruma">
+					<label class="circulo" style="margin-right: 2rem;">Sim
+						<input type="radio" name="radio" id="myCheck-sim3" onclick="myFunction()" required>
+						<span class="checkmark"></span>
+					</label>
+					<label class="circulo-nao">Não
+						<input type="radio" name="radio" id="myCheck-nao" onclick="myFunction()" required>
+						<span class="checkmark"></span>
+					</label>
+				</div>
+			</div>
+		</form>
+
+		<!-- <li class="Container2">
+			<a style="text-decoration:none" href="cadastrado.html" class="Botao">Sim</a>
+		</li>
+		<li class="Container2">
+			<a style="text-decoration:none" href="cadastro_humano.html" class="Botao">Não</a>
+		</li> -->
+	</div>
+	<div class="Container3">
+		<a href="cadastro_dog_hdc.html"><img src="assets/img/seta_v.png" style="width: 4.5rem; margin-right: 4rem"></a>
+		<div class="Progress_Bar" style="width: 500px; margin-top: 2rem;">
+		</div>
+		<div class="Progress_Bar2" style="width: 100px; margin-top: 2rem;">
+		</div>
+		<a id="sim" href="finalizado.html" style="display: none"><img src="assets/img/seta.png" style="width: 4.5rem; margin-left: 4rem; "></a>
+		<a id="nao" href="nao_completou.html" ><img src="assets/img/seta.png" style="width: 4.5rem; margin-left: 4rem; "></a>
+</body>
+
+<script>
+	function myFunction() {
+  		var S = document.getElementById("sim");
+  		var N = document.getElementById("nao");
+  
+  		var checkBoxsim = document.getElementById("myCheck-sim");
+  		var checkBoxsim2 = document.getElementById("myCheck-sim2");
+  		var checkBoxsim3 = document.getElementById("myCheck-sim3");
+  
+  		if (checkBoxsim.checked == true && checkBoxsim2.checked == true && checkBoxsim3.checked == true){
+   		 	S.style.display = "block";
+    		N.style.display = "none"; } 
+  		else {
+   		 	S.style.display = "none";
+    		N.style.display = "block";
+  		}
+	}
+</script>
+
+<style>
+
+.peso {
+	display: inline-flex;
+}
+
+.pesoo {
+	width:10rem ;
+	height:6rem;
+	font-size:5rem;
+	margin-left: 1rem;
+}
+
+.bituga {
+	flex-direction: column;
+	width: 100%;
+	margin-top: 2rem;
+	}
+
+.bituga p{
+	font-size: 5rem;
+	width: 100%;
+	}
+
+.item {
+	width: 100%;
+	margin-top: 10px;
+	}
+
+.Container2_lista{
+	margin: 45px;
+	}
+
+.circulo, .circulo-nao {
+  display: block;
+  position: relative;
+  padding-left: 6rem;
+  margin-bottom: 12px;
+  cursor: pointer;
+  color: white;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.circulo input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.circulo-nao input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 70px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.circulo:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.circulo input:checked ~ .checkmark {
+  background-color: #fdad1a;
+}
+
+.circulo-nao:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.circulo-nao input:checked ~ .checkmark {
+  background-color: #fdad1a;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.circulo input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.circulo .circulo-nao .checkmark:after {
+ 	top: 20px;
+	left: 20px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: white;
+}
+
+.arruma {
+	display: inline-flex
+}
+</style>
+
+</html> 

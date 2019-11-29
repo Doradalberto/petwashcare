@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title> Agendamento </title>
+	<link href="assets/css/reset.css" rel="reset">
+	<link href="assets/css/base_home.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="assets/css/style-agendamento.css">
+	<link rel="stylesheet" href="assets/css/base_home.css">
+</head>
+<body>
+	<div class="Container1">
+		<div class="Container1_L">
+			<a href="home.html"><img src="assets/img/pata.png" alt="Imagem de uma pata de cachorro"></a>
+		</div> 
+		<div class="Container1_L">
+			<p style="font-size: 5.5rem; margin-top: 2rem;">Agendamento</p>
+		</div> 
+	</div>
+
+	<div class="app-container" ng-app="dateTimeApp" ng-controller="dateTimeCtrl as ctrl" ng-cloak>
+		
+	<div date-picker
+		 datepicker-title="Select Date"
+		 picktime="true"
+		 pickdate="true"
+		 pickpast="false"
+		 mondayfirst="false"
+		 custom-message="You have selected"
+		 selecteddate="ctrl.selected_date"
+		 updatefn="ctrl.updateDate(newdate)">
+	
+		<div class="datepicker"
+			 ng-class="{
+				'am': timeframe == 'am',
+				'pm': timeframe == 'pm',
+				'compact': compact
+			}">
+			<div class="datepicker-calendar">
+				<div class="calendar-header">
+					<div class="goback" ng-click="moveBack()" ng-if="pickdate">
+						<svg width="30" height="30">
+							<path fill="none" stroke="#0DAD83" stroke-width="3" d="M19,6 l-9,9 l9,9"/>
+						</svg>
+					</div>
+					<div class="current-month-container">{{ currentViewDate.getFullYear() }} {{ currentMonthName() }}</div>
+					<div class="goforward" ng-click="moveForward()" ng-if="pickdate">
+						<svg width="30" height="30">
+							<path fill="none" stroke="#0DAD83" stroke-width="3" d="M11,6 l9,9 l-9,9" />
+						</svg>
+					</div>
+				</div>
+				<div class="calendar-day-header">
+					<span ng-repeat="day in days" class="day-label">{{ day.short }}</span>
+				</div>
+				<div class="calendar-grid" ng-class="{false: 'no-hover'}[pickdate]">
+					<div
+						ng-class="{'no-hover': !day.showday}"
+						ng-repeat="day in month"
+						class="datecontainer"
+						ng-style="{'margin-left': calcOffset(day, $index)}"
+						track by $index>
+						<div class="datenumber" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+							{{ day.daydate }}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="timepicker" ng-if="picktime == 'true'">
+				<div ng-class="{'am': timeframe == 'am', 'pm': timeframe == 'pm' }">
+					<div class="timepicker-container-outer" selectedtime="time" timetravel>
+						<div class="timepicker-container-inner">
+							<div class="timeline-container" ng-mousedown="timeSelectStart($event)" sm-touchstart="timeSelectStart($event)">
+								<div class="current-time">
+									<div class="actual-time">{{ time }}</div>
+								</div>
+								<div class="timeline">
+								</div>
+								<div class="hours-container">
+									<div class="hour-mark" ng-repeat="hour in getHours() track by $index"></div>
+								</div>
+							</div>
+							<div class="display-time">
+								<div class="decrement-time" ng-click="adjustTime('decrease')">
+									<svg width="24" height="24">
+										<path stroke="white" stroke-width="2" d="M8,12 h8"/>
+									</svg>
+								</div>
+								<div class="time" ng-class="{'time-active': edittime.active}">
+									<input type="text" class="time-input" ng-model="edittime.input" ng-keydown="changeInputTime($event)" ng-focus="edittime.active = true; edittime.digits = [];" ng-blur="edittime.active = false"/>
+									<div class="formatted-time">{{ edittime.formatted }}</div>
+								</div>
+								<div class="increment-time" ng-click="adjustTime('increase')">
+									<svg width="24" height="24">
+										<path stroke="white" stroke-width="2" d="M12,7 v10 M7,12 h10"/>
+									</svg>
+								</div>
+							</div>
+							<div class="am-pm-container">
+								<div class="am-pm-button" ng-click="changetime('am');">am</div>
+								<div class="am-pm-button" ng-click="changetime('pm');">pm</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- <div class="buttons-container">
+				<div class="cancel-button">CANCEL</div>
+				<div class="save-button">SAVE</div>
+			</div> -->
+			
+			</div>
+		</div>
+	</div>
+	<div class="Container5">
+	<p style="font-weight: bold; font-size: 5rem;" > Horários Disponiveis  </p>
+	<div class="Container5-coisa">
+			<div class="Container5-horas">
+				<p> 11:45 </p>
+				<p> 12:00 </p>
+				<p> 16:30 </p>
+			</div>
+		</div>
+	</div>
+
+	<!-- <div class="agendamento_">
+		<div class="agendamento2">
+			<p> Início: </p>
+			<input type="date" name="data-inicio" id="data-inicip">
+		</div>
+		<div class="agendamento3">
+			<p> Fim: </p>
+			<input type="date" name="data-fim" id="data-fim">
+		</div>
+
+	</div> -->
+	<div class="Container3">
+			<a href="cadastrado.html"><img src="assets/img/seta_v.png" style="width: 4.5rem; margin-right: 4rem"></a>
+			<div class="Progress_Bar" style="width: 500px; margin-top: 2rem;">
+			</div>
+			<div class="Progress_Bar2" style="width: 100px; margin-top: 2rem;">
+			</div>
+			<a href="finalizado.html"><img src="assets/img/seta.png" style="width: 4.5rem; margin-left: 4rem;"></a>
+		</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js'></script>
+
+    <script src="assets/js/index.js"></script>
+
+<style type="text/css">
+input[type=date]{
+	width: 500px;
+	font-size: 4rem;
+	background-color: #dddddd;
+	color: white;
+	border-radius: 2rem;
+	text-align: center;
+	padding-left: 20px;
+	}
+
+</style>	
+</body>
+
+</html> 
